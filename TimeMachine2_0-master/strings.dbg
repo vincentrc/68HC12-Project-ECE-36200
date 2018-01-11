@@ -1,0 +1,212 @@
+                XDEF strings
+                XREF lcdstring
+
+strings:   cmpa #0
+           lbeq  logbasic
+           cmpa #1
+           lbeq  namelogin
+           cmpa #2
+           lbeq  passlogin
+           cmpa #3
+           lbeq  optionbasic
+           
+namelogin: cmpb #1
+           lbeq logname1
+           cmpb #2
+           lbeq  logname2
+           cmpb #3
+           lbeq  logname3
+           cmpb #4
+           lbeq  logname4
+           cmpb #5
+           lbeq  logname5
+           
+logbasic:  movb #'u',lcdstring
+           movb #'s',lcdstring+1
+           movb #'e',lcdstring+2
+           movb #'r',lcdstring+3
+           movb #'n',lcdstring+4
+           movb #'a',lcdstring+5
+           movb #'m',lcdstring+6
+           movb #'e',lcdstring+7
+           movb #':',lcdstring+8
+           movb #' ',lcdstring+9
+           movb #' ',lcdstring+10
+           movb #' ',lcdstring+11
+           movb #' ',lcdstring+12
+           movb #' ',lcdstring+13
+           movb #' ',lcdstring+14
+           movb #' ',lcdstring+15
+           movb #'p',lcdstring+16
+           movb #'a',lcdstring+17
+           movb #'s',lcdstring+18
+           movb #'s',lcdstring+19
+           movb #'w',lcdstring+20
+           movb #'o',lcdstring+21
+           movb #'r',lcdstring+22
+           movb #'d',lcdstring+23
+           movb #':',lcdstring+24
+           movb #' ',lcdstring+25
+           movb #' ',lcdstring+26
+           movb #' ',lcdstring+27
+           movb #' ',lcdstring+28
+           movb #' ',lcdstring+29
+           movb #' ',lcdstring+30
+           movb #' ',lcdstring+31
+           movb #0,lcdstring+32  
+           rts
+           
+optionbasic:movb #'O',lcdstring
+           movb #'p',lcdstring+1
+           movb #'t',lcdstring+2
+           movb #'i',lcdstring+3
+           movb #'o',lcdstring+4
+           movb #'n',lcdstring+5
+           movb #'-',lcdstring+6
+           movb #'>',lcdstring+7
+           movb #' ',lcdstring+8
+           movb #' ',lcdstring+9
+           movb #' ',lcdstring+10
+           movb #' ',lcdstring+11
+           movb #' ',lcdstring+12
+           movb #' ',lcdstring+13
+           movb #' ',lcdstring+14
+           movb #' ',lcdstring+15
+           movb #'>',lcdstring+16
+           movb #' ',lcdstring+17
+           movb #' ',lcdstring+18
+           movb #' ',lcdstring+19
+           movb #' ',lcdstring+20
+           movb #' ',lcdstring+21
+           movb #' ',lcdstring+22
+           movb #' ',lcdstring+23
+           movb #' ',lcdstring+24
+           movb #' ',lcdstring+25
+           movb #' ',lcdstring+26
+           movb #' ',lcdstring+27
+           movb #' ',lcdstring+28
+           movb #' ',lcdstring+29
+           movb #' ',lcdstring+30
+           movb #' ',lcdstring+31
+           movb #0,lcdstring+32  
+           rts
+ 
+ logname1: movb #'n',lcdstring+9
+           movb #'a',lcdstring+10
+           movb #'m',lcdstring+11
+           movb #'e',lcdstring+12
+           movb #'1',lcdstring+13 
+           rts
+           
+logname2:  movb #'n',lcdstring+9
+           movb #'a',lcdstring+10
+           movb #'m',lcdstring+11
+           movb #'e',lcdstring+12
+           movb #'2',lcdstring+13
+           rts
+           
+logname3:  movb #'n',lcdstring+9
+           movb #'a',lcdstring+10
+           movb #'m',lcdstring+11
+           movb #'e',lcdstring+12
+           movb #'3',lcdstring+13
+           rts
+           
+logname4:  movb #'n',lcdstring+9
+           movb #'a',lcdstring+10
+           movb #'m',lcdstring+11
+           movb #'e',lcdstring+12
+           movb #'4',lcdstring+13
+           rts
+           
+logname5:  movb #'n',lcdstring+9
+           movb #'a',lcdstring+10
+           movb #'m',lcdstring+11
+           movb #'e',lcdstring+12
+           movb #'5',lcdstring+13
+           rts
+           
+passlogin: cmpb #1
+           beq logpass1
+           cmpb #2
+           beq  logpass2
+           cmpb #3
+           beq  logpass3
+           cmpb #4
+           lbeq  logpass4
+           cmpb #5
+           lbeq  logpass5
+           cmpb #6
+           lbeq  logpass6
+           cmpb #7
+           lbeq  logpass7
+
+logpass1:  movb #'*',lcdstring+25
+           movb #' ',lcdstring+26
+           movb #' ',lcdstring+27
+           movb #' ',lcdstring+28
+           movb #' ',lcdstring+29
+           movb #' ',lcdstring+30
+           movb #' ',lcdstring+31
+           movb #0,lcdstring+32  
+           rts
+           
+logpass2:  movb #'*',lcdstring+25
+           movb #'*',lcdstring+26
+           movb #' ',lcdstring+27
+           movb #' ',lcdstring+28
+           movb #' ',lcdstring+29
+           movb #' ',lcdstring+30
+           movb #' ',lcdstring+31
+           movb #0,lcdstring+32  
+           rts
+
+logpass3:  movb #'*',lcdstring+25
+           movb #'*',lcdstring+26
+           movb #'*',lcdstring+27
+           movb #' ',lcdstring+28
+           movb #' ',lcdstring+29
+           movb #' ',lcdstring+30
+           movb #' ',lcdstring+31
+           movb #0,lcdstring+32  
+           rts
+
+logpass4:  movb #'*',lcdstring+25
+           movb #'*',lcdstring+26
+           movb #'*',lcdstring+27
+           movb #'*',lcdstring+28
+           movb #' ',lcdstring+29
+           movb #' ',lcdstring+30
+           movb #' ',lcdstring+31
+           movb #0,lcdstring+32  
+           rts
+
+logpass5:  movb #'*',lcdstring+25
+           movb #'*',lcdstring+26
+           movb #'*',lcdstring+27
+           movb #'*',lcdstring+28
+           movb #'*',lcdstring+29
+           movb #' ',lcdstring+30
+           movb #' ',lcdstring+31
+           movb #0,lcdstring+32  
+           rts
+                      
+logpass6:  movb #'*',lcdstring+25
+           movb #'*',lcdstring+26
+           movb #'*',lcdstring+27
+           movb #'*',lcdstring+28
+           movb #'*',lcdstring+29
+           movb #'*',lcdstring+30
+           movb #' ',lcdstring+31
+           movb #0,lcdstring+32  
+           rts
+
+logpass7:  movb #'*',lcdstring+25
+           movb #'*',lcdstring+26
+           movb #'*',lcdstring+27
+           movb #'*',lcdstring+28
+           movb #'*',lcdstring+29
+           movb #'*',lcdstring+30
+           movb #'*',lcdstring+31
+           movb #0,lcdstring+32  
+           rts           

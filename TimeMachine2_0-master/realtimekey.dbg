@@ -1,0 +1,10 @@
+            xdef userupdate
+            xref display_string,strings,lcdstring
+            
+;Just updates LCD 
+
+userupdate: ldaa #1
+            jsr  strings  
+            ldd  #lcdstring  
+            jsr  display_string     ;display string
+            rts
